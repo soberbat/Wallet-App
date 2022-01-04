@@ -22,20 +22,127 @@ header nav ul {
 
 .main-section {
   padding: 0 15rem;
-}
-
-.welcoming {
+  margin-top: 4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #4d2d55;
   text-align: center;
 }
+
+.welcoming span {
+  font-size: 0.8rem;
+}
 .welcoming .boxes {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
-  gap: 10rem;
+  gap: 2rem;
 }
 .welcoming .boxes div {
-  border: 1px solid;
-  background-color: #c5c1c1;
+  background-color: #f5f5f9;
+  width: 38%;
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .welcoming .boxes div img {
-  width: 25%;
+  width: 20%;
+  margin-bottom: 1rem;
+}
+.welcoming .boxes div span {
+  color: #908893;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.welcoming .boxes div p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 7rem;
+}
+.welcoming .boxes div button {
+  padding: 0.8rem 3rem;
+  border-radius: 0.3rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.btn-pink {
+  background-color: #e94a70;
+}
+
+.btn-pink:hover {
+  background-color: pink;
+}
+
+.btn-purple {
+  background-color: #4d2d55;
+}
+
+.btn-purple:hover {
+  background-color: #704a70;
+}
+
+.generate-box {
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.generate-box__container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #f5f5f9;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.generate-box__container img {
+  width: 15%;
+  margin-bottom: 2rem;
+}
+.generate-box__container p {
+  margin-bottom: 0.2rem;
+}
+.generate-box__container .underlined {
+  color: #908893;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.generate-box__container .line {
+  border-bottom: 1px solid;
+  margin: 1rem 0;
+  width: 40%;
+}
+.generate-box__container button {
+  padding: 0.7rem 2rem;
+  border-radius: 0.3rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  background-color: #e94a70;
+  margin-bottom: 1.4rem;
+}
+.generate-box__container button:hover {
+  background-color: purple;
+}
+.generate-box__container .terms {
+  color: #908893;
+  font-size: 0.8rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.generate-box__container .cancel {
+  font-weight: 300;
+  font-size: 0.8rem;
+  text-decoration: underline;
 }/*# sourceMappingURL=main.css.map */
