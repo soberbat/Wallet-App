@@ -57,7 +57,7 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: black;
   font-weight: 100;
   text-align: center;
@@ -110,9 +110,9 @@
   margin: 1rem 0rem;
   font-size: 1rem;
 }
-.key-phrase-commentary div button {
+.key-phrase-commentary div input {
   padding: 0.5rem 1.3rem;
-  background-color: #e94a70;
+  background-color: grey;
   border-radius: 0.3rem;
   border: none;
   color: white;
