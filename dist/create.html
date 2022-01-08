@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link rel="stylesheet" href="/dist-scss/css/main.css" />
     <title>Document</title>
   </head>
   <body>
-    <div>
+    <div class="main-div">
       <header>
         <nav>
           <img src="/img/wallet_logo.png" alt="" />
@@ -95,14 +95,31 @@
                   <input type="checkbox" class="checkboxİnput" name="" id="" />
                   I wrote down my key phrase in a secure location
                 </label>
-                <input type="button" id="disabledButton" disabled value="Access Wallet" ></input>
+                <input  type="button" id="disabledButton" disabled value="Access Wallet" ></input>
               </div>
             </div>
           </div>
           <!-- RİGHT-BOTTOM SİDE -->
         </section>
         <!-- GENERATİNG THE KEY SECTİON -->
+        <!-- MODAL -->
       </article>
+      <section class="modal-container">
+        <div class="modal">
+          <div class="modal__up">
+            <span>Verify Mnemonic</span>
+            <span id="verify-close">X</span>
+          </div>
+          <div class="modal__down">
+            <span>Fill In Mnemonic Phrase Below</span>
+            <div class="modal__grid">
+              <label for="">1<input readonly="true" placeholder="aa" type="text"></label><label for="">2<input type="text"></label><label for="">3<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label><label for="">6<input type="text"></label>
+            </div>
+            <button  id="verify-button">VERİFY</button>
+          </div>
+        </div>
+      </section>
+      <!-- MODAL -->
     </div>
   </body>
 </html>

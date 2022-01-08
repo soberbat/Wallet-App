@@ -173,7 +173,7 @@
 }
 .key-phrase-commentary div input {
   padding: 0.5rem 1.3rem;
-  background-color: #e94a70;
+  background-color: gray;
   border-radius: 0.3rem;
   border: none;
   color: white;
@@ -274,6 +274,140 @@ header nav ul {
   background-color: #704a70;
 }
 
+.main-div {
+  position: relative;
+}
+
+.modal-container {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.24);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.modal {
+  background-color: white;
+  width: 35%;
+  border-radius: 2rem;
+  padding: 0rem 0rem;
+  text-align: center;
+  box-shadow: 1px 1px 30px 10px rgba(0, 0, 0, 0.171);
+}
+.modal__up {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: 1px solid gainsboro;
+  padding: 0.8rem 4rem;
+  padding-top: 1.3rem;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+.modal__down {
+  padding: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.modal__down span {
+  display: inline-block;
+  margin: 2rem 0rem;
+  font-size: 1.2em;
+  color: #4d2d55;
+}
+.modal__down .modal__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 2rem);
+}
+.modal__down .modal__grid label {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #e94a70;
+}
+.modal__down .modal__grid label input {
+  margin-left: 0.3rem;
+  width: 7rem;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  color: black;
+}
+.modal__down .modal__grid input:focus {
+  outline: none;
+}
+.modal button {
+  padding: 0.5rem 5rem;
+  background-color: #4d2d55;
+  border-radius: 0.3rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  align-self: center;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+.animate-opacity {
+  -webkit-animation: opac 0.8s;
+          animation: opac 0.8s;
+  display: flex;
+}
+
+@-webkit-keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opac {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.display-none {
+  display: none;
+}
+
+.animate-show {
+  -webkit-animation: show 0.8s;
+          animation: show 0.8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes show {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 950px) {
   html {
     font-size: 10px;
@@ -290,6 +424,7 @@ header nav ul {
 
   .main-section {
     padding: 0rem 2rem;
+    margin-top: 10rem;
   }
 
   .key-generating-section {
