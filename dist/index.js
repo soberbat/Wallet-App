@@ -3,6 +3,14 @@ const generateContainer = document.querySelector(".generate-box");
 const keyGeneratingContainer = document.querySelector(
   ".key-generating-section"
 );
+
+const KeyContainerDisplay = document.querySelector(".key-generating-container");
+const verifiedContainerDisplay = document.querySelector(
+  ".verified-section-container"
+);
+
+const modalAlert = document.querySelector(".alert");
+
 const generateKey = document.querySelector("#regenerate-button");
 const gridİtems = document.querySelectorAll(".grid span");
 const gridParagraph = document.querySelector(".key-phrase p");
@@ -42,7 +50,7 @@ async function getUser() {
 function fillTheBlanks(data) {
   //PARAGRAPH AND GRİD WORDS
   gridİtems.forEach((item, index) => {
-    item.innerText = data[index];
+    item.innerHTML = `<strong>${index + 1}</strong>.   ${data[index]}`;
   });
   let paragraph = data.join(" ");
   gridParagraph.innerText = paragraph;
@@ -69,13 +77,22 @@ function checkTheBlanks(numbers, data, emptyİnputs) {
   console.log(emptyWords);
 
   verifyButton.addEventListener("click", () => {
-    let arr = emptyİnputs.map((input, index) => {
+    let arr = emptyİnputs.every((input, index) => {
       if (input.value === emptyWords[index]) {
         console.log(input.value, emptyWords[index]);
-        return 1;
+        return true;
       }
     });
-    console.log(arr);
+    if (arr === true) {
+      modal.classList.add("animate-show");
+      setTimeout(() => {
+        modal.classList.add("display-none");
+      }, 1000);
+      KeyContainerDisplay.style.display = "none";
+      verifiedContainerDisplay.style.display = "block";
+    } else {
+      modalAlert.style.display = "block";
+    }
   });
 }
 // CHECKİNG WHETHER THE GİVEN İNPUT İS THE RİGHT ONE
@@ -96,8 +113,9 @@ function fillTheModal(data) {
   inputs.forEach((item, index) => {
     if (!numbers.includes(index)) {
       item.value = data[index];
-      item.setAttribute("readonly", true);
+      item.setAttribute("readonly", "readonly");
     } else {
+      item.removeAttribute("readonly");
       item.value = "";
       emptyİnputs.push(item);
     }
@@ -107,6 +125,7 @@ function fillTheModal(data) {
   // CHECK THE BLANKS
   checkTheBlanks(numbers, data, emptyİnputs);
   // CHECK THE BLANKS
+  console.log(numbers);
 }
 
 // FİLL THE MODAL WİTH THE İNDEXES AND LEAVİNG SOME BLANK
@@ -123,6 +142,12 @@ verifyClose.addEventListener("click", () => {
   }, 1000);
 });
 
+buttonn.addEventListener("click", () => {
+  modal.classList.remove("animate-show");
+  modal.classList.remove("display-none");
+  modal.classList.add("animate-opacity");
+});
+
 //MODAL DİSPLAY
 
 checkbox.addEventListener("change", () => {
@@ -134,14 +159,8 @@ checkbox.addEventListener("change", () => {
   } else {
     buttonn.disabled = true;
     console.log("şuan checked değil");
-    buttonn.style.backgroundColor = "grey";
+    buttonn.style.backgroundColor = "#f4a3b8";
   }
-});
-
-buttonn.addEventListener("click", () => {
-  modal.classList.remove("animate-show");
-  modal.classList.remove("display-none");
-  modal.classList.add("animate-opacity");
 });
 
 getUser();

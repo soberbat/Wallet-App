@@ -173,7 +173,7 @@
 }
 .key-phrase-commentary div input {
   padding: 0.5rem 1.3rem;
-  background-color: gray;
+  background-color: #f4a3b8;
   border-radius: 0.3rem;
   border: none;
   color: white;
@@ -296,8 +296,14 @@ header nav ul {
   width: 35%;
   border-radius: 2rem;
   padding: 0rem 0rem;
+  padding-bottom: 2rem;
   text-align: center;
   box-shadow: 1px 1px 30px 10px rgba(0, 0, 0, 0.171);
+}
+.modal .alert {
+  color: #886c8c;
+  display: none;
+  margin-top: 1rem;
 }
 .modal__up {
   display: flex;
@@ -309,6 +315,9 @@ header nav ul {
   padding-top: 1.3rem;
   font-size: 1.3rem;
   font-weight: 100;
+}
+.modal__up #verify-close {
+  cursor: pointer;
 }
 .modal__down {
   padding: 0rem 2rem;
@@ -355,6 +364,9 @@ header nav ul {
   align-self: center;
   cursor: pointer;
   margin-top: 4rem;
+}
+.modal button:hover {
+  background-color: #886c8c;
 }
 
 .animate-opacity {
@@ -408,6 +420,31 @@ header nav ul {
     opacity: 0;
   }
 }
+.verified-section-container {
+  display: none;
+}
+.verified-section-container .verified-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  color: black;
+}
+.verified-section-container .verified-section h1 {
+  font-size: 12rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  margin-top: 0;
+}
+.verified-section-container .verified-section span {
+  color: #908893;
+  padding: 1rem 1rem;
+  width: 100%;
+  background-color: brown;
+  color: white;
+}
+
 @media screen and (max-width: 950px) {
   html {
     font-size: 10px;
@@ -470,5 +507,15 @@ header nav ul {
   }
   .key-phrase-commentary div button {
     align-self: center;
+  }
+
+  .modal {
+    width: 80%;
+  }
+  .modal__down .modal__grid {
+    gap: 0.3rem;
+  }
+  .modal__down .modal__grid label input {
+    width: 5rem;
   }
 }/*# sourceMappingURL=main.css.map */
