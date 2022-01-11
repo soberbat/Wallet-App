@@ -100,4 +100,32 @@ header {
   background-color: rgb(112, 74, 112);
 }
 
+@media screen and (max-width: 950px) {
+  .welcoming {
+    .boxes {
+      div {
+        align-items: center;
+
+        img {
+          width: 40%;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 1rem;
+          text-align: center;
+          margin-top: 1rem;
+          margin-bottom: 3rem;
+        }
+        button {
+          padding: 0.4rem 1.8rem;
+
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
 // FİRST WELCOMİNG PAGE STYLES

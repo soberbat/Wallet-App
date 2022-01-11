@@ -85,4 +85,25 @@ header nav ul {
 
 .btn-purple:hover {
   background-color: #704a70;
+}
+
+@media screen and (max-width: 950px) {
+  .welcoming .boxes div {
+    align-items: center;
+  }
+  .welcoming .boxes div img {
+    width: 40%;
+    margin-bottom: 1rem;
+  }
+  .welcoming .boxes div p {
+    font-weight: 500;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+  .welcoming .boxes div button {
+    padding: 0.4rem 1.8rem;
+    font-size: 0.6rem;
+  }
 }/*# sourceMappingURL=welcoming.css.map */

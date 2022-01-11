@@ -22,7 +22,7 @@ const modal = document.querySelector(".modal-container");
 const verifyButton = document.querySelector("#verify-button");
 
 const inputs = document.querySelectorAll(".modal__grid label input");
-console.log(inputs);
+
 // ADJUSTİNG THE STYLE PROPERTY OF GENERATE KEY
 generateKeyButton.addEventListener("click", () => {
   generateContainer.style.opacity = "0";
@@ -69,27 +69,32 @@ function randomNumber(min, max) {
 //RANDOM NUMBER
 
 // CHECKİNG WHETHER THE GİVEN İNPUT İS THE RİGHT ONE
-function checkTheBlanks(numbers, data, emptyİnputs) {
-  let emptyWords = [];
-  numbers.forEach((number) => {
-    emptyWords.push(data[number]);
-  });
+function checkTheBlanks(numbers, emptyWords, emptyİnputs) {
   console.log(emptyWords);
-
+  console.log(emptyİnputs);
   verifyButton.addEventListener("click", () => {
-    let arr = emptyİnputs.every((input, index) => {
-      if (input.value === emptyWords[index]) {
-        console.log(input.value, emptyWords[index]);
-        return true;
+    let checked = 0;
+    for (let index = 0; index < emptyWords.length; index++) {
+      if (emptyİnputs[index].value === emptyWords[index]) {
+        checked += 1;
+        console.log(checked);
       }
-    });
-    if (arr === true) {
+    }
+    if (checked === emptyWords.length) {
       modal.classList.add("animate-show");
       setTimeout(() => {
         modal.classList.add("display-none");
       }, 1000);
-      KeyContainerDisplay.style.display = "none";
-      verifiedContainerDisplay.style.display = "block";
+      Swal.fire({
+        title: "You have the access to your wallet.",
+        width: 400,
+        padding: "2em",
+        color: "#716add",
+        background: "#fff url(/images/trees.png)",
+        toast: true,
+        position: "bottom-start",
+        timer: 3000,
+      });
     } else {
       modalAlert.style.display = "block";
     }
@@ -110,11 +115,14 @@ function fillTheModal(data) {
 
   // FİLLİNG THE BLANKS
   let emptyİnputs = [];
+  let emptyWords = [];
   inputs.forEach((item, index) => {
     if (!numbers.includes(index)) {
       item.value = data[index];
       item.setAttribute("readonly", "readonly");
     } else {
+      let word = data[index];
+      emptyWords.push(word);
       item.removeAttribute("readonly");
       item.value = "";
       emptyİnputs.push(item);
@@ -123,7 +131,7 @@ function fillTheModal(data) {
   // FİLLİNG THE BLANKS
 
   // CHECK THE BLANKS
-  checkTheBlanks(numbers, data, emptyİnputs);
+  checkTheBlanks(numbers, emptyWords, emptyİnputs);
   // CHECK THE BLANKS
   console.log(numbers);
 }

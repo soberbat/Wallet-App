@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist-scss/css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <header>
+        <nav>
+          <img src="/img/wallet_logo.png" alt="" />
+          <ul>
+            <li>Access Wallet</li>
+            <li>Create New Wallet</li>
+          </ul>
+        </nav>
+      </header>
+      <article class="main-section">
+        <!-- GENERATİNG A KEYWORD DO YOU HAVE İT OR NOT? -->
+        <section class="generate-box">
+          <div class="generate-box__container">
+            <p>Generate a new key phrase to setup your Avalanche Wallet.</p>
+            <a href=""
+              ><span class="underlined"> Already have a wallet?</span></a
+            >
+            <span class="line"></span>
+            <button class="generate-box-button">Generate Key Phrase</button>
+            <span class="terms"
+              >By using this application you agree to the
+              <a href=""> Terms of Use </a></span
+            >
+            <span class="cancel">Cancel</span>
+          </div>
+        </section>
+        <!-- GENERATİNG A KEYWORD DO YOU HAVE İT OR NOT? -->
+
+        <!-- GENERATİNG THE KEY SECTİON -->
+        <section class="key-generating-section">
+          <div class="key-generating-container">
+            <!-- LEFT-TOP SİDE -->
+            <div class="key-phrase">
+              <div class="grid">
+                <span>1* sausage</span><span>a</span><span>a</span><span>a</span
+                ><span>a</span><span>a</span><span>a</span><span>a</span
+                ><span>a</span><span>a</span><span>a</span><span>a</span
+                ><span>a</span><span>a</span><span>a</span><span>a</span
+                ><span>a</span><span>a</span><span>a</span><span>a</span
+                ><span>a</span><span>a</span><span>a</span><span>a</span>
+              </div>
+              <p>
+                alcohol sauce start gadget someone afraid convince piece junk
+                margin later ritual fabric stereo derive bulk educate west
+                annual seat multiply zero saddle region
+              </p>
+              <button id="regenerate-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-arrow-repeat"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
+                  /></svg
+                >Regenerate
+              </button>
+            </div>
+            <!-- LEFT-TOP SİDE -->
+            <!-- RİGHT-BOTTOM SİDE -->
+            <div class="key-phrase-commentary">
+              <img src="/img/keyphrase.png" alt="" />
+              <h1>This is your key phrase.</h1>
+              <span
+                >Use these 24 words in sequential order to recover your
+                Avalanche Wallet</span
+              >
+              <div class="checkbox">
+                <span>Attention!</span>
+                <p>
+                  Store this key phrase in a secure location. Anyone with this
+                  key phrase can access your Avalanche Wallet. There is no way
+                  to recover lost key phrases.
+                </p>
+                <label for="">
+                  <input type="checkbox" class="checkboxİnput" name="" id="" />
+                  I wrote down my key phrase in a secure location
+                </label>
+                <input
+                  type="button"
+                  id="disabledButton"
+                  disabled
+                  value="Access Wallet"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- RİGHT-BOTTOM SİDE -->
+        </section>
+        <!-- GENERATİNG THE KEY SECTİON -->
+      </article>
+    </div>
+    <!-- MODAL -->
+
+    <section class="modal-container">
+      <div class="modal">
+        <div class="modal__up">
+          <span>Verify Mnemonic</span>
+          <span id="verify-close">X</span>
+        </div>
+        <div class="modal__down">
+          <span>Fill In Mnemonic Phrase Below</span>
+          <div class="modal__grid">
+            <label for="">1<input readonly="true" type="text" /></label
+            ><label for="">2<input type="text" /></label
+            ><label for="">3<input type="text" /></label
+            ><label for="">4<input type="text" /></label
+            ><label for="">5<input type="text" /></label
+            ><label for="">6<input type="text" /></label
+            ><label for="">7<input type="text" /></label
+            ><label for="">8<input type="text" /></label
+            ><label for="">9<input type="text" /></label
+            ><label for="">10<input type="text" /></label
+            ><label for="">11<input type="text" /></label
+            ><label for="">12<input type="text" /></label
+            ><label for="">13<input type="text" /></label
+            ><label for="">14<input type="text" /></label
+            ><label for="">15<input type="text" /></label
+            ><label for="">16<input type="text" /></label
+            ><label for="">17<input type="text" /></label
+            ><label for="">18<input type="text" /></label
+            ><label for="">19<input type="text" /></label
+            ><label for="">20<input type="text" /></label
+            ><label for="">21<input type="text" /></label
+            ><label for="">22<input type="text" /></label
+            ><label for="">23<input type="text" /></label
+            ><label for="">24<input type="text" /></label>
+          </div>
+          <button id="verify-button">VERİFY</button>
+        </div>
+        <span class="alert">Mismatch!</span>
+      </div>
+    </section>
+    <!-- MODAL -->
+  </body>
+</html>
+<script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
